@@ -88,7 +88,8 @@ namespace THREEx {
             }
 
             var onKeyPress = function (event: KeyboardEvent) {
-                if (event.which !== charCode) return;
+                if (event.which !== charCode)
+                    return;
                 toggle();
             }.bind(this);
 

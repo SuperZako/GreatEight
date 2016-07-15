@@ -23,6 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.css" />
+    <Content Include="build\out.js" />
     <Content Include="css\base.css" />
     <Content Include="css\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="css\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
@@ -37,6 +38,8 @@
     <Content Include="js\OrbitControls.js" />
     <Content Include="js\Stats.js" />
     <TypeScriptCompile Include="js\Billboard.ts" />
+    <TypeScriptCompile Include="js\FieldPlayer.ts" />
+    <TypeScriptCompile Include="js\SoccerPitch.ts" />
     <TypeScriptCompile Include="js\TextureAnimator.ts" />
     <TypeScriptCompile Include="js\THREEx.FullScreen.ts" />
     <TypeScriptCompile Include="js\THREEx.KeyboardState.ts" />
@@ -46,9 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="typings\stats.d.ts" />
+    <TypeScriptCompile Include="typings\three-orbitcontrols.d.ts" />
     <TypeScriptCompile Include="typings\three.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="build\out.js.map" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -89,8 +95,8 @@
     <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
     <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
     <TypeScriptNoImplicitAny>True</TypeScriptNoImplicitAny>
-    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
-    <TypeScriptOutFile />
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptOutFile>build/out.js</TypeScriptOutFile>
     <TypeScriptOutDir />
     <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
     <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
