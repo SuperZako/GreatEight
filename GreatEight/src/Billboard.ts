@@ -9,7 +9,7 @@ class Billboard {
         let texture = new THREE.TextureLoader().load('images/run.png');
         this.textureAnimator = new TextureAnimator(texture, 10, 1, 10, 75); // texture, #horiz, #vert, #total, duration.
         let material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide });
-        let geometry = new THREE.PlaneGeometry(18, 18, 1, 1);
+        let geometry = new THREE.PlaneGeometry(36, 36, 1, 1);
         this.mesh = new THREE.Mesh(geometry, material);
         let mesh = this.mesh;
         mesh.position.set(-50, 8, 0);

@@ -33,24 +33,23 @@
     <Content Include="images\checkerboard.jpg" />
     <Content Include="images\explosion.jpg" />
     <Content Include="images\icon-info.png" />
+    <Content Include="images\pitch1L.jpg" />
     <Content Include="images\run.png" />
     <Content Include="index.html" />
-    <Content Include="js\OrbitControls.js" />
-    <Content Include="js\Stats.js" />
-    <TypeScriptCompile Include="js\Billboard.ts" />
-    <TypeScriptCompile Include="js\FieldPlayer.ts" />
-    <TypeScriptCompile Include="js\SoccerPitch.ts" />
-    <TypeScriptCompile Include="js\TextureAnimator.ts" />
-    <TypeScriptCompile Include="js\THREEx.FullScreen.ts" />
-    <TypeScriptCompile Include="js\THREEx.KeyboardState.ts" />
-    <TypeScriptCompile Include="js\THREEx.WindowResize.ts" />
+    <Content Include="lib\Stats.js" />
+    <TypeScriptCompile Include="src\Billboard.ts" />
+    <TypeScriptCompile Include="src\FieldPlayer.ts" />
+    <TypeScriptCompile Include="src\SoccerPitch.ts" />
+    <TypeScriptCompile Include="src\TextureAnimator.ts" />
+    <TypeScriptCompile Include="src\THREEx.FullScreen.ts" />
+    <TypeScriptCompile Include="src\THREEx.KeyboardState.ts" />
+    <TypeScriptCompile Include="src\THREEx.WindowResize.ts" />
     <Content Include="lib\three.min.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="typings\stats.d.ts" />
-    <TypeScriptCompile Include="typings\three-orbitcontrols.d.ts" />
     <TypeScriptCompile Include="typings\three.d.ts" />
   </ItemGroup>
   <ItemGroup>

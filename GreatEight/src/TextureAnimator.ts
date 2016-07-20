@@ -1,4 +1,10 @@
 ﻿
+interface Frame {
+}
+
+class Animations {
+}
+
 class TextureAnimator {
     private currentDisplayTime = 0;  // how long has the current image been displayed?
     private currentTile = 0; // which image is currently being displayed?

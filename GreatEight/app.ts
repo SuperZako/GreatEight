@@ -1,9 +1,9 @@
-﻿/// <reference path="./js/THREEx.KeyboardState.ts" />
-/// <reference path="./js/THREEx.WindowResize.ts" />
-/// <reference path="./js/THREEx.FullScreen.ts" />
+﻿/// <reference path="./src/THREEx.KeyboardState.ts" />
+/// <reference path="./src/THREEx.WindowResize.ts" />
+/// <reference path="./src/THREEx.FullScreen.ts" />
 
-/// <reference path="./js/Billboard.ts" />
-/// <reference path="./js/SoccerPitch.ts" />
+/// <reference path="./src/Billboard.ts" />
+/// <reference path="./src/SoccerPitch.ts" />
 
 /*
        Three.js "tutorials by example"
@@ -19,7 +19,6 @@ namespace Main {
     var scene: THREE.Scene;
     var camera: THREE.PerspectiveCamera;
     var renderer: THREE.WebGLRenderer;
-    var controls: THREE.OrbitControls;
     var stats: Stats;
     var keyboard = new THREEx.KeyboardState();
     var clock = new THREE.Clock();
@@ -36,13 +35,13 @@ namespace Main {
         // CAMERA
         const SCREEN_WIDTH = window.innerWidth;
         const SCREEN_HEIGHT = window.innerHeight;
-        const VIEW_ANGLE = 45;
+        const VIEW_ANGLE = 90;
         const ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT;
         const NEAR = 0.1;
-        const FAR = 20000;
+        const FAR = 1000;
         camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
         scene.add(camera);
-        camera.position.set(0, 150, 400);
+        camera.position.z = SCREEN_HEIGHT / 2;//set(0, 150, 400);
         camera.lookAt(scene.position);
 
 
@@ -55,22 +54,22 @@ namespace Main {
         // EVENTS
         THREEx.WindowResize(renderer, camera);
         THREEx.FullScreen.bindKey({ charCode: 'm'.charCodeAt(0) });
-        // CONTROLS
-        controls = new THREE.OrbitControls(camera, renderer.domElement);
+
         // STATS
         stats = new Stats();
         stats.dom.style.position = 'absolute';
         stats.dom.style.bottom = '0px';
         stats.dom.style.zIndex = '100';
         container.appendChild(stats.dom);
-        // LIGHT
-        var light = new THREE.PointLight(0xffffff);
-        light.position.set(0, 250, 0);
-        scene.add(light);
 
-        var directionalLight = new THREE.DirectionalLight(0xffffff);
-        directionalLight.position.set(0, 0.7, 0.7);
-        scene.add(directionalLight);
+        //// LIGHT
+        //var light = new THREE.PointLight(0xffffff);
+        //light.position.set(0, 250, 0);
+        //scene.add(light);
+
+        //var directionalLight = new THREE.DirectionalLight(0xffffff);
+        //directionalLight.position.set(0, 0.7, 0.7);
+        //scene.add(directionalLight);
 
         // FLOOR
         let pitch = new SoccerPitch(scene);
@@ -118,7 +117,6 @@ namespace Main {
             // do something
         }
 
-        controls.update();
         stats.update();
 
         man.quaternion(camera.quaternion);
